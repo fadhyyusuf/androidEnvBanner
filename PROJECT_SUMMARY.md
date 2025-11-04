@@ -32,6 +32,7 @@ All configuration, documentation, and disclaimers have been completed successful
 - ✅ 80% opacity (transparent)
 - ✅ Click-through capability
 - ✅ Minimalist design (top-right corner)
+- ✅ Always on top (never hidden behind other UI elements)
 - ✅ One-line integration
 - ✅ Multi-line text support
 - ✅ Rounded corners & elevation
@@ -48,6 +49,7 @@ All configuration, documentation, and disclaimers have been completed successful
 | `DISCLAIMER.md` | AI-assisted development disclosure | ✅ Complete (English) |
 | `LICENSE` | MIT License with AI disclaimer | ✅ Complete (English) |
 | `KOTLIN_COMPATIBILITY.md` | Kotlin version compatibility guide | ✅ Complete (English) |
+| `Z_INDEX_FIX.md` | Banner always-on-top implementation | ✅ Complete (English) |
 
 ### Setup & Publishing Guides
 | File | Description | Status |

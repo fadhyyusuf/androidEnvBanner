@@ -38,7 +38,14 @@ object EnvBannerUtil {
         val background = textView.background as? GradientDrawable
         background?.setColor(Color.parseColor(environment.colorHex))
 
-        decorView.addView(banner, 0)
+        // Set elevation yang lebih tinggi agar banner selalu di atas
+        banner.elevation = 9999f
+
+        // Tambahkan banner di posisi terakhir (index paling atas) agar selalu terlihat
+        decorView.addView(banner)
+
+        // Pastikan banner di bring to front
+        banner.bringToFront()
     }
 }
 

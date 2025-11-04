@@ -53,7 +53,7 @@ afterEvaluate {
 
                 groupId = "com.github.fadhyyusuf"
                 artifactId = "envbanner"
-                version = "1.0.1"
+                version = "1.0.2"
 
                 pom {
                     name.set("Environment Banner")

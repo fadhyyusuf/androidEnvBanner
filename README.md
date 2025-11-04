@@ -16,6 +16,7 @@ An Android library to display environment banners in the top-right corner of you
 👻 **Transparent**: Banner has 80% opacity so items behind it remain visible  
 🖱️ **Click-through**: Items behind the banner can still be clicked  
 📐 **Minimalist Design**: Banner only appears in the top-right corner with minimal size  
+🔝 **Always On Top**: Banner stays visible above all UI elements (never hidden behind content)  
 > **📦 Available on JitPack:** This library is published on JitPack for easy integration.  
 🎯 **Easy Integration**: Only one line of code needed for implementation  
 
@@ -292,10 +293,13 @@ EnvBannerUtil.showBanner(this, env)
 
 ## How It Works
 
-1. **Opacity**: Banner has 80% alpha channel (CC in ARGB hex) for transparency
-2. **Click-through**: Banner has `clickable=false` and `focusable=false` so touch events pass through to views behind it
-3. **Rounded Corners**: Uses GradientDrawable with 6dp corner radius
-4. **Elevation**: 4dp shadow for depth effect
+1. **Always On Top**: Banner uses maximum elevation (9999dp) and `bringToFront()` to ensure it's always visible above all UI elements
+2. **Opacity**: Banner has 80% alpha channel (CC in ARGB hex) for transparency
+3. **Click-through**: Banner has `clickable=false` and `focusable=false` so touch events pass through to views behind it
+4. **Rounded Corners**: Uses GradientDrawable with 6dp corner radius
+5. **High Elevation**: 9999dp elevation ensures banner is never hidden by other views
+
+> **🎯 Z-Index Fix**: The banner is guaranteed to appear on top of all content, including RecyclerViews, Fragments, AppBars, FABs, and any other UI elements. For technical details, see [Z_INDEX_FIX.md](Z_INDEX_FIX.md).
 
 ## Sample App
 
