@@ -1,6 +1,12 @@
 # Environment Banner Library
 
+[![](https://jitpack.io/v/fadhyyusuf/envbanner.svg)](https://jitpack.io/#fadhyyusuf/envbanner)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![API](https://img.shields.io/badge/API-24%2B-brightgreen.svg?style=flat)](https://android-arsenal.com/api?level=24)
+
 An Android library to display environment banners in the top-right corner of your app, helping testers and developers identify which environment they're currently using.
+
+> **⚠️ AI-Assisted Project**: This library was created with the assistance of AI technology. While all code has been tested and verified, users are encouraged to review and test thoroughly before production use. See [DISCLAIMER.md](DISCLAIMER.md) for details.
 
 ## Features
 
@@ -10,7 +16,54 @@ An Android library to display environment banners in the top-right corner of you
 👻 **Transparent**: Banner has 80% opacity so items behind it remain visible  
 🖱️ **Click-through**: Items behind the banner can still be clicked  
 📐 **Minimalist Design**: Banner only appears in the top-right corner with minimal size  
+> **📦 Available on JitPack:** This library is published on JitPack for easy integration.  
 🎯 **Easy Integration**: Only one line of code needed for implementation  
+
+### Method 1: Via JitPack (Recommended)
+
+#### Step 1: Add JitPack repository
+
+**For Kotlin DSL (`settings.gradle.kts` or root `build.gradle.kts`):**
+```kotlin
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+        maven { url = uri("https://jitpack.io") }
+    }
+}
+```
+
+**For Groovy DSL (`settings.gradle` or root `build.gradle`):**
+```groovy
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+        maven { url 'https://jitpack.io' }
+    }
+}
+```
+
+#### Step 2: Add dependency
+
+**For Kotlin DSL (`app/build.gradle.kts`):**
+```kotlin
+dependencies {
+    implementation("com.github.fadhyyusuf:envbanner:1.0.0")
+}
+```
+
+**For Groovy DSL (`app/build.gradle`):**
+```groovy
+dependencies {
+    implementation 'com.github.fadhyyusuf:envbanner:1.0.0'
+}
+```
+
+### Method 2: Local Module (For Development)
 
 ## Installation
 
@@ -316,7 +369,17 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 
 For issues, questions, or suggestions, please open an issue on the GitHub repository.
 
+## Disclaimer
+
+This project was created with the assistance of AI technology. All code has been tested and verified to work correctly. For more information, see [DISCLAIMER.md](DISCLAIMER.md).
+
+## Acknowledgments
+
+- Created with AI assistance (November 2025)
+- Thanks to the Android developer community
+- Built with Kotlin and Android best practices
+
 ---
 
-**Made with ❤️ for easier testing**
+**Made with ❤️ (and 🤖 AI) for easier testing**
 

@@ -8,6 +8,12 @@ import android.view.ViewGroup
 import android.widget.FrameLayout
 import android.widget.TextView
 
+/**
+ * Utility object for displaying environment banners.
+ *
+ * This library was created with AI assistance (November 2025).
+ * See DISCLAIMER.md for more information.
+ */
 object EnvBannerUtil {
     fun showBanner(activity: Activity, environment: Environment) {
         val decorView = activity.window.decorView as ViewGroup

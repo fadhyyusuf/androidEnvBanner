@@ -1,5 +1,13 @@
 package com.fy.envbanner
 
+/**
+ * Environment sealed class for environment banner configuration.
+ *
+ * This library was created with AI assistance (November 2025).
+ * All code has been tested and verified to work correctly.
+ *
+ * @see [DISCLAIMER.md](https://github.com/fadhyyusuf/envbanner/blob/main/DISCLAIMER.md)
+ */
 sealed class Environment(val displayName: String, val colorHex: String) {
     object DEV : Environment("DEV", "#CC2196F3")
     object QA : Environment("QA", "#CC4CAF50")
