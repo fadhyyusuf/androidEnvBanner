@@ -52,14 +52,14 @@ dependencyResolutionManagement {
 **For Kotlin DSL (`app/build.gradle.kts`):**
 ```kotlin
 dependencies {
-    implementation("com.github.fadhyyusuf:envbanner:1.0.0")
+    implementation("com.github.fadhyyusuf:androidEnvBanner:x.x.x")
 }
 ```
 
 **For Groovy DSL (`app/build.gradle`):**
 ```groovy
 dependencies {
-    implementation 'com.github.fadhyyusuf:envbanner:1.0.0'
+    implementation 'com.github.fadhyyusuf:androidEnvBanner:x.x.x'
 }
 ```
 
