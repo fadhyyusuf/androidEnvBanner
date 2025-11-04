@@ -33,6 +33,7 @@ All configuration, documentation, and disclaimers have been completed successful
 - ✅ Click-through capability
 - ✅ Minimalist design (top-right corner)
 - ✅ Always on top (never hidden behind other UI elements)
+- ✅ No flickering (Application-level persistent banner)
 - ✅ One-line integration
 - ✅ Multi-line text support
 - ✅ Rounded corners & elevation
@@ -50,6 +51,8 @@ All configuration, documentation, and disclaimers have been completed successful
 | `LICENSE` | MIT License with AI disclaimer | ✅ Complete (English) |
 | `KOTLIN_COMPATIBILITY.md` | Kotlin version compatibility guide | ✅ Complete (English) |
 | `Z_INDEX_FIX.md` | Banner always-on-top implementation | ✅ Complete (English) |
+| `PERSISTENT_BANNER_GUIDE.md` | No-flickering persistent banner guide | ✅ Complete (English) |
+| `PERSISTENT_BANNER_ID.md` | No-flickering guide (Indonesian) | ✅ Complete (Indonesian) |
 
 ### Setup & Publishing Guides
 | File | Description | Status |

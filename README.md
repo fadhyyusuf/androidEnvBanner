@@ -17,8 +17,10 @@ An Android library to display environment banners in the top-right corner of you
 🖱️ **Click-through**: Items behind the banner can still be clicked  
 📐 **Minimalist Design**: Banner only appears in the top-right corner with minimal size  
 🔝 **Always On Top**: Banner stays visible above all UI elements (never hidden behind content)  
+⚡ **Zero Flickering**: WindowManager overlay - banner truly floating with ZERO flickering  
+🎯 **True Persistent**: Banner created once and stays across all activities  
 > **📦 Available on JitPack:** This library is published on JitPack for easy integration.  
-🎯 **Easy Integration**: Only one line of code needed for implementation  
+🚀 **Easy Integration**: Only one line of code needed for implementation  
 
 ### Method 1: Via JitPack (Recommended)
 
@@ -102,9 +104,62 @@ dependencies {
 
 ## Usage
 
-### Basic Implementation
+### Recommended: Application-Level Init (No Flickering)
 
-In `MainActivity.kt` or your Base Activity:
+For best experience with smooth transitions between activities:
+
+#### Step 1: Create Application Class
+
+```kotlin
+import android.app.Application
+import com.fy.envbanner.EnvBannerUtil
+import com.fy.envbanner.Environment
+
+class MyApplication : Application() {
+    override fun onCreate() {
+        super.onCreate()
+        
+        // Initialize banner once for entire app
+        // Banner will automatically appear on ALL activities
+        EnvBannerUtil.init(this, Environment.DEV)
+    }
+}
+```
+
+#### Step 2: Register in AndroidManifest.xml
+
+```xml
+<application
+    android:name=".MyApplication"
+    android:icon="@mipmap/ic_launcher"
+    ...>
+    <!-- Your activities -->
+</application>
+```
+
+#### Step 3: Done! 🎉
+
+Banner automatically appears on all activities without flickering!
+
+```kotlin
+class MainActivity : AppCompatActivity() {
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
+        
+        // No need to call showBanner() here!
+        // Banner automatically appears ✅
+    }
+}
+```
+
+> **💡 Benefits**: No flickering between activities, less code, automatic consistency across all screens.
+
+---
+
+### Alternative: Per-Activity (Legacy Method)
+
+If you prefer manual control per activity:
 
 ```kotlin
 import com.fy.envbanner.EnvBannerUtil
@@ -120,6 +175,8 @@ class MainActivity : AppCompatActivity() {
     }
 }
 ```
+
+> **⚠️ Note**: This method may have slight flickering when navigating between activities.
 
 ### Available Environments
 

@@ -41,8 +41,9 @@ class MainActivity : AppCompatActivity() {
             insets
         }
 
-        // Tampilkan banner environment pertama kali
-        showCurrentEnvironment()
+        // Note: No need to call showBanner() here anymore!
+        // Banner automatically appears because of init() in MyApplication class
+        // But we keep this for backward compatibility and environment switching demo
 
         // Button di pojok kanan atas untuk demo bahwa item di belakang banner bisa di-click
         findViewById<Button>(R.id.btnTopRight).setOnClickListener {
@@ -52,20 +53,11 @@ class MainActivity : AppCompatActivity() {
         // Button untuk mengubah environment
         findViewById<Button>(R.id.btnChangeEnv).setOnClickListener {
             currentEnvIndex = (currentEnvIndex + 1) % environments.size
-            showCurrentEnvironment()
+            // Update environment globally - will apply to all activities
+            EnvBannerUtil.updateEnvironment(environments[currentEnvIndex])
+            // Also update current activity immediately
+            EnvBannerUtil.showBanner(this, environments[currentEnvIndex])
             Toast.makeText(this, "Environment berubah ke: ${environments[currentEnvIndex].displayName}", Toast.LENGTH_SHORT).show()
         }
-    }
-
-    private fun showCurrentEnvironment() {
-        // Hapus banner lama jika ada (untuk demo perubahan environment)
-        val decorView = window.decorView as android.view.ViewGroup
-        val bannerTag = "env_banner"
-        decorView.findViewWithTag<android.view.View>(bannerTag)?.let {
-            decorView.removeView(it)
-        }
-
-        // Tampilkan banner environment
-        EnvBannerUtil.showBanner(this, environments[currentEnvIndex])
     }
 }
