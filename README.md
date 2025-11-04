@@ -353,9 +353,12 @@ Environment.fromText("DEV\nSERVER\nV1.2.3\nBUILD 123", "#CC2196F3")
 
 ## Requirements
 
-- **minSdk**: 24 (Android 7.0)
-- **targetSdk**: 36
-- **Kotlin**: 1.9+
+- **minSdk**: 21 (Android 5.0 Lollipop)
+- **targetSdk**: 34
+- **Kotlin**: 1.8.0 - 2.0.x (see [KOTLIN_COMPATIBILITY.md](KOTLIN_COMPATIBILITY.md))
+- **Java**: 8+
+
+> 📘 **Kotlin Compatibility**: This library supports Kotlin 1.8+ through 2.0+. For detailed compatibility information, see [KOTLIN_COMPATIBILITY.md](KOTLIN_COMPATIBILITY.md).
 
 ## License
 

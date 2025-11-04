@@ -15,8 +15,10 @@ All configuration, documentation, and disclaimers have been completed successful
 | **GroupId** | `com.github.fadhyyusuf` |
 | **ArtifactId** | `envbanner` |
 | **Version** | `1.0.0` |
-| **MinSDK** | 24 (Android 7.0) |
-| **TargetSDK** | 36 |
+| **MinSDK** | 21 (Android 5.0) |
+| **TargetSDK** | 34 |
+| **Kotlin** | 1.8.0 - 2.0.x |
+| **Java** | 8+ |
 | **License** | MIT |
 | **Build Status** | ✅ SUCCESS |
 
@@ -45,6 +47,7 @@ All configuration, documentation, and disclaimers have been completed successful
 | `README.md` | Main documentation with installation & usage | ✅ Complete (English) |
 | `DISCLAIMER.md` | AI-assisted development disclosure | ✅ Complete (English) |
 | `LICENSE` | MIT License with AI disclaimer | ✅ Complete (English) |
+| `KOTLIN_COMPATIBILITY.md` | Kotlin version compatibility guide | ✅ Complete (English) |
 
 ### Setup & Publishing Guides
 | File | Description | Status |
@@ -314,11 +317,14 @@ All artifacts generated successfully ✅
 
 ## 📱 Compatibility
 
-- **Android**: 7.0 (API 24) and above
-- **Kotlin**: 1.9+
-- **Java**: Compatible (see examples)
+- **Android**: 5.0 (API 21) and above
+- **Kotlin**: 1.8.0 - 2.0.x (see [KOTLIN_COMPATIBILITY.md](KOTLIN_COMPATIBILITY.md))
+- **Java**: 8+ Compatible
 - **Gradle**: Kotlin DSL & Groovy DSL
 - **Build System**: Gradle 8.0+
+- **Android Gradle Plugin**: 8.0+
+
+> **Wide Kotlin Support**: This library supports Kotlin versions from 1.8.0 through 2.0.x, ensuring compatibility with projects from the last 2 years. See [KOTLIN_COMPATIBILITY.md](KOTLIN_COMPATIBILITY.md) for details.
 
 ---
 

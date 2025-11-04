@@ -212,8 +212,10 @@ git push origin :refs/tags/1.0.0
 | **ArtifactId** | `envbanner` |
 | **Version** | `1.0.0` |
 | **Package** | `com.fy.envbanner` |
-| **MinSDK** | 24 (Android 7.0) |
-| **TargetSDK** | 36 |
+| **MinSDK** | 21 (Android 5.0) |
+| **TargetSDK** | 34 |
+| **Kotlin** | 1.8.0 - 2.0.x (see [KOTLIN_COMPATIBILITY.md](KOTLIN_COMPATIBILITY.md)) |
+| **Java** | 8+ |
 | **License** | MIT |
 | **JitPack URL** | https://jitpack.io/#YOUR_USERNAME/envbanner |
 
