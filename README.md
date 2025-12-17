@@ -19,6 +19,7 @@ An Android library to display environment banners in the top-right corner of you
 🔝 **Always On Top**: Banner stays visible above all UI elements (never hidden behind content)  
 ⚡ **Zero Flickering**: WindowManager overlay - banner truly floating with ZERO flickering  
 🎯 **True Persistent**: Banner created once and stays across all activities  
+🎭 **Universal Theme Compatibility**: Works with ALL Android themes (AppCompat, Material3, MaterialComponents, etc.)  
 > **📦 Available on JitPack:** This library is published on JitPack for easy integration.  
 🚀 **Easy Integration**: Only one line of code needed for implementation  
 
@@ -418,8 +419,11 @@ Environment.fromText("DEV\nSERVER\nV1.2.3\nBUILD 123", "#CC2196F3")
 - **targetSdk**: 34
 - **Kotlin**: 1.8.0 - 2.0.x (see [KOTLIN_COMPATIBILITY.md](KOTLIN_COMPATIBILITY.md))
 - **Java**: 8+
+- **Theme**: Compatible with ALL Android themes (AppCompat, Material3, MaterialComponents, etc.)
 
 > 📘 **Kotlin Compatibility**: This library supports Kotlin 1.8+ through 2.0+. For detailed compatibility information, see [KOTLIN_COMPATIBILITY.md](KOTLIN_COMPATIBILITY.md).
+
+> 🎭 **Theme Compatibility**: This library works with any Android theme! No need to change your app's theme. See [THEME_COMPATIBILITY_FIX.md](THEME_COMPATIBILITY_FIX.md) for technical details.
 
 ## License
 
