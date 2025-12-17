@@ -6,6 +6,7 @@ import android.graphics.Color
 import android.graphics.drawable.GradientDrawable
 import android.os.Bundle
 import android.util.Log
+import android.view.ContextThemeWrapper
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import android.widget.FrameLayout
@@ -151,7 +152,10 @@ object EnvBannerUtil {
 
     private fun createBanner(activity: Activity, environment: Environment): FrameLayout? {
         try {
-            val inflater = LayoutInflater.from(activity)
+            // Wrap context with Material Components theme to ensure compatibility
+            // This prevents crashes when parent app doesn't use Material theme
+            val themedContext = ContextThemeWrapper(activity, R.style.EnvBanner_MaterialTheme)
+            val inflater = LayoutInflater.from(themedContext)
 
             // Inflate banner layout
             val banner = inflater.inflate(R.layout.banner_environment, null) as? FrameLayout

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--
+        Lightweight Material Components theme for EnvBanner library.
+        This ensures the banner can be inflated regardless of parent app's theme.
+        Uses minimal Material Components dependencies to avoid conflicts.
+    -->
+    <style name="EnvBanner.MaterialTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- Minimal theme configuration - only what's needed for inflation -->
+        <item name="colorPrimary">#6200EE</item>
+        <item name="colorPrimaryVariant">#3700B3</item>
+        <item name="colorOnPrimary">#FFFFFF</item>
+    </style>
+</resources>
+
